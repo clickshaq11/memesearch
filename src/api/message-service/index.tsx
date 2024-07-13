@@ -16,11 +16,9 @@ export function useMessage() {
   const [result, setResult] = useState<string[]>([]);
 
   useEffect(() => {
-    if (search) {
-      messageServiceSingleton
-        .sendSearch(search)
-        .then((value) => setResult(value));
-    }
+    messageServiceSingleton
+      .sendSearch(search)
+      .then((value) => setResult(value));
   }, [search, messageServiceSingleton]);
 
   return {

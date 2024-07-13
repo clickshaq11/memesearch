@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
+import styles from "./styles.module.css";
 
 type SearchBarProps = {
   search: string;
@@ -6,5 +7,11 @@ type SearchBarProps = {
 };
 
 export function SearchBar({ search, setSearch }: SearchBarProps) {
-  return <input value={search} onChange={(e) => setSearch(e.target.value)} />;
+  return (
+    <input
+      value={search}
+      onChange={(e) => setSearch(e.target.value)}
+      className={styles.search}
+    />
+  );
 }

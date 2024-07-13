@@ -1,0 +1,6 @@
+.bg {
+  background-color: #b3b3b3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

@@ -4,9 +4,7 @@ mod io;
 
 #[tauri::command]
 fn send_search(search: &str) -> Vec<std::path::PathBuf> {
-    let filenames = io::get_filenames();
-
-    println!("{:?}", filenames);
+    let filenames = io::get_filenames(search);
 
     filenames
 }
